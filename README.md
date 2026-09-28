@@ -14,7 +14,6 @@ Original saved graph outputs from the [author-provided Colab notebook](https://c
 
 | ViT/DeiT Small and Tiny | ViT Base and Large |
 | --- | --- |
-| ![Small and Tiny baseline legend](figures/paper/figure7_small_tiny_legend.png) | ![Base and Large baseline legend](figures/paper/figure7_base_large_legend.png) |
 | ![Small and Tiny accuracy](figures/paper/figure7_small_tiny.png) | ![Base and Large accuracy](figures/paper/figure7_base_large.png) |
 
 **Figure 8 — Accuracy–GOPs trade-off across pruning blocks**
