@@ -21,7 +21,9 @@ This repository packages the supplied `entropy_experiments` notebook collection 
 - **Complete preservation:** **1,060 notebooks** (960 regular notebooks and 100 checkpoints), **1,060 guarded Python exports**, every saved notebook output, and all 47 original text logs. All **6,162 source files** are listed with SHA-256 checksums.
 - **Results:** all eight paper tables (Table 4 has two CSVs), Figure 9 latency data, **50,738 notebook accuracy observations**, and **55,595 text-log observations**, with provenance kept separate.
 
-Original paper, dataset archives, annotations, images, and exact notebook bytes are also preserved in the local repository folder. Large external assets and byte-exact notebook duplicates are excluded from Git; notebook code and all saved outputs are included in the portable Git archive. See [archive layout and restoration](docs/ARCHIVE.md).
+**The complete experiment is tracked in Git.** All 6,162 original files—including the paper, dataset archives, annotations, images, and exact notebook bytes—are included through Git LFS. Reusable code, documentation, extracted results, and generated run outputs are included too. See [archive layout and restoration](docs/ARCHIVE.md).
+
+Install Git LFS before cloning, then run `git lfs pull` inside the clone to retrieve every original file. LFS pointer files alone are not the dataset; the associated objects must be pushed to the remote alongside Git commits. See [publishing instructions](docs/PUBLISHING.md).
 
 ## Quick start
 
@@ -47,7 +49,7 @@ gateattn-plot --data results/paper --output runs/paper-figures
 python tools/make_demo.py
 
 # Verify the portable notebook archive and run CPU tests.
-python tools/verify_archive.py
+python tools/verify_archive.py --local --git-tracked
 python -m unittest discover -s tests -v
 ```
 
@@ -124,8 +126,9 @@ See [reproduction details and execution examples](docs/REPRODUCIBILITY.md) and t
 | `archive/output_index/`, `archive/output_objects/` | Lossless saved output storage and reconstruction maps |
 | `archive/files/` | Original text logs and other portable source files |
 | `archive/manifest.json`, `archive/notebook_catalog.json` | Full file coverage, hashes, settings, functions, and saved run states |
-| `archive/originals/` | Exact original notebook bytes, local and Git-ignored |
-| `local_assets/` | Exact original images, datasets, annotations, and PDF, local and Git-ignored |
+| `archive/originals/` | Exact original notebook bytes, tracked through Git LFS |
+| `local_assets/` | Exact original images, datasets, annotations, and PDF, tracked through Git LFS |
+| `runs/` | Generated evaluation, visualization, restoration, and smoke-test outputs |
 | `tools/`, `tests/`, `.github/workflows/` | Archival utilities, sweeps, CPU tests, and CI |
 | `docs/` | Method, data, archive, experiment, visualization, and provenance guides |
 
@@ -151,4 +154,4 @@ The supplied folder contains no HLS/RTL source, FPGA project, bitstream, or synt
 }
 ```
 
-A machine-readable citation is provided in [CITATION.cff](CITATION.cff). The code license has not yet been selected by the rights holder; see [LICENSE.md](LICENSE.md). The local publisher PDF and third-party datasets are not part of the Git publication payload.
+A machine-readable citation is provided in [CITATION.cff](CITATION.cff). The code license has not yet been selected by the rights holder; see [LICENSE.md](LICENSE.md). The publisher PDF and third-party datasets are included as requested and retain their existing rights and terms.

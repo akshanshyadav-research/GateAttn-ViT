@@ -1,0 +1,31 @@
+usage: gateattn-visualize [-h] [--config CONFIG] [--model MODEL]
+                          [--method {entropy,random,center,center-square,none}]
+                          [--drop-rate DROP_RATE]
+                          [--attention-blocks [ATTENTION_BLOCKS ...]]
+                          [--attention-drop ATTENTION_DROP]
+                          [--preprocessing {legacy,timm}]
+                          [--quantization {none,notebook-fx16}]
+                          [--checkpoint CHECKPOINT] [--seed SEED]
+                          [--random-init] [--device DEVICE] --image IMAGE
+                          --output OUTPUT [--compare-unpruned]
+
+Export entropy, patch selection, and per-block spatial attention figures.
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG       JSON ExperimentConfig file
+  --model MODEL
+  --method {entropy,random,center,center-square,none}
+  --drop-rate DROP_RATE
+  --attention-blocks [ATTENTION_BLOCKS ...]
+  --attention-drop ATTENTION_DROP
+  --preprocessing {legacy,timm}
+  --quantization {none,notebook-fx16}
+  --checkpoint CHECKPOINT
+  --seed SEED
+  --random-init         Smoke test only; do not report accuracy as a research
+                        result
+  --device DEVICE
+  --image IMAGE
+  --output OUTPUT
+  --compare-unpruned

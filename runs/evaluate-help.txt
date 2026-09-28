@@ -1,0 +1,34 @@
+usage: gateattn-evaluate [-h] [--config CONFIG] [--model MODEL]
+                         [--method {entropy,random,center,center-square,none}]
+                         [--drop-rate DROP_RATE]
+                         [--attention-blocks [ATTENTION_BLOCKS ...]]
+                         [--attention-drop ATTENTION_DROP]
+                         [--preprocessing {legacy,timm}]
+                         [--quantization {none,notebook-fx16}]
+                         [--checkpoint CHECKPOINT] [--seed SEED]
+                         [--random-init] [--device DEVICE] --data DATA
+                         --class-map CLASS_MAP --output OUTPUT
+                         [--max-images MAX_IMAGES]
+
+Reproducible single-image evaluation with explicit input and checkpoint
+metadata.
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG       JSON ExperimentConfig file
+  --model MODEL
+  --method {entropy,random,center,center-square,none}
+  --drop-rate DROP_RATE
+  --attention-blocks [ATTENTION_BLOCKS ...]
+  --attention-drop ATTENTION_DROP
+  --preprocessing {legacy,timm}
+  --quantization {none,notebook-fx16}
+  --checkpoint CHECKPOINT
+  --seed SEED
+  --random-init         Smoke test only; do not report accuracy as a research
+                        result
+  --device DEVICE
+  --data DATA
+  --class-map CLASS_MAP
+  --output OUTPUT
+  --max-images MAX_IMAGES

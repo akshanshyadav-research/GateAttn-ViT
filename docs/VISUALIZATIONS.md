@@ -43,7 +43,7 @@ python tools/restore_notebook.py \
   --extract-media runs/original-entropy-figures
 ```
 
-The full [notebook index](NOTEBOOK_INDEX.md) includes every variant. Original image files are in the local `local_assets/` mirror and inventoried by SHA-256. A Git-only clone needs those external image inputs for rerunning original visualizations; the saved notebook outputs can still be restored from Git alone.
+The full [notebook index](NOTEBOOK_INDEX.md) includes every variant. Original image files are tracked in `local_assets/` through Git LFS and inventoried by SHA-256. Run `git lfs pull` after cloning to retrieve those inputs for rerunning original visualizations. Saved notebook outputs can also be restored from the compressed output store without rerunning inference.
 
 ## Published-result plots
 

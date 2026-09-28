@@ -14,11 +14,11 @@ Chunks are bounded at 4 MiB uncompressed and deduplicated by SHA-256. This prese
 
 `archive/files/` contains all 47 original text logs. The manifest records every file's size, original SHA-256, destination, notebook reconstruction hash, and Python export path. `notebook_catalog.json` records model calls, literal configuration assignments, function names, output counts, and saved errors. These settings describe notebook source at capture time; saved outputs may originate from earlier interactive states.
 
-## Local complete copy
+## Complete original files in Git LFS
 
-`archive/originals/` contains the exact original bytes of every notebook. `local_assets/` contains the exact original bytes of every non-notebook file: PDF, images, COCO archives and annotations, and text logs. These two directories are Git-ignored to avoid duplicating notebook outputs and distributing large external assets in the source repository.
+`archive/originals/` contains the exact original bytes of every notebook. `local_assets/` contains the exact original bytes of every non-notebook file: PDF, images, COCO archives and annotations, and text logs. Both directories are tracked through Git LFS, preserving exact bytes while keeping large files out of ordinary Git blobs. The historical directory name `local_assets` is retained for compatibility; these assets are now part of the repository.
 
-Nothing in the source inventory is omitted from the **local** archive. A Git clone contains all code, notebook outputs, logs, tabulated results, documentation, and the asset manifest; it does not contain the Git-ignored raw dataset/PDF copies. Obtain datasets from their original providers and use the manifest to verify an archival asset bundle if one is shared separately.
+Nothing in the source inventory is omitted from Git. A complete clone with Git LFS objects includes every original file as well as all code, notebook outputs, logs, tabulated results, documentation, and generated run artifacts. Install Git LFS and run `git lfs pull` after cloning. An ordinary `git archive` or hosting-service ZIP may contain LFS pointers instead of these large files; use an LFS-enabled clone for the complete experiment.
 
 ## Restore a notebook with all outputs
 
@@ -40,9 +40,12 @@ An original plot may be stored in a notebook whose name is not explicitly about 
 # Python AST equivalence to original cell code, and portable log hashes.
 python tools/verify_archive.py
 
-# On the original server, also verify the byte-exact local archive
-# and the untouched parent source folder.
-python tools/verify_archive.py --local --original-source ..
+# After git lfs pull, verify all original bytes and their tracked LFS identities.
+python tools/verify_archive.py --local --git-tracked
+git lfs fsck
+
+# On the original server, also verify the untouched parent source folder.
+python tools/verify_archive.py --local --git-tracked --original-source ..
 ```
 
 The archive creation tool is retained as `tools/archive_experiments.py`. It refuses to overwrite an existing manifest. For a future independent snapshot, create a new repository destination and pass `--source` and `--repo`; do not archive this repository into itself or replace the provenance of this release.

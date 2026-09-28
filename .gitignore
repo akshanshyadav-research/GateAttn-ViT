@@ -1,7 +1,4 @@
-# Exact original bytes and third-party dataset assets are kept locally.
-/archive/originals/
-/local_assets/
-/runs/
+# Only environment, build products, and interpreter caches are excluded.
 /.venv/
 /build/
 /dist/

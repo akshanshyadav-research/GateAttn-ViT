@@ -1,16 +1,33 @@
-# Publishing this local repository
+# Publishing the complete experiment repository
 
-The repository is prepared locally on the server. It has not been pushed to a hosting service.
+The repository is prepared locally on the server. It has not been pushed to a hosting service. Every original experiment file is tracked: code, notebooks, original outputs, logs, image assets, COCO data and annotations, ZIP archives, and the supplied paper. Generated run outputs are tracked as well.
 
-Before choosing a public release, select the code license and replace `LICENSE.md`. The citation identifies the paper and its authors. Checkpoints and exact external dataset identities should accompany any claim of independently reproduced accuracy. The paper-to-code map explicitly records the experimental and hardware artifacts absent from the supplied folder.
+## Git LFS
 
-The source Git payload includes code, documentation, all notebook sources and outputs, original logs, extracted observations, and paper-transcribed data. The full local copies under `archive/originals/` and `local_assets/` are intentionally ignored. A source clone therefore does not include the raw datasets or publisher PDF; the checksum inventory remains available.
+`archive/originals/` and `local_assets/` use Git LFS to retain exact source bytes, including files larger than ordinary Git hosting limits. Large generated run outputs also use LFS. Git commits store content-addressed pointers; the corresponding file objects are stored by Git LFS. Both must reach the remote to publish the complete repository.
 
-Once a remote repository exists, connect and push from this directory:
+After creating a remote repository, publish from this directory:
 
 ```bash
+git lfs install --local
 git remote add origin <your-repository-url>
+git lfs push --all origin main
 git push -u origin main
 ```
 
-Create a versioned release after running the documented tests and archive verification. No remote URL, hosting-account identity, archival DOI, or open-source license is invented by the preparation process.
+The normal Git LFS pre-push hook also uploads required objects. The explicit LFS push above makes the complete-object upload clear. No remote has been configured or uploaded during preparation.
+
+To obtain the complete experiment elsewhere:
+
+```bash
+git lfs install
+git clone <your-repository-url>
+cd entropy-vit-publication
+git lfs pull
+python tools/verify_archive.py --local --git-tracked
+git lfs fsck
+```
+
+A hosting-service ZIP or plain `git archive` may include LFS pointers instead of the original data. Use the LFS-enabled clone instructions above for the complete experiment.
+
+Select the code license before public release. The supplied paper and datasets retain their respective rights and terms; their inclusion here does not change them. The reproduction and paper-to-code guides document which external checkpoints and implementation artifacts were not present in the original folder.

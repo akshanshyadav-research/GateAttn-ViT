@@ -28,7 +28,7 @@ Historical notebooks point to dataset locations such as `/home/viraj/my_project/
 
 ## Assets found in the supplied folder
 
-The local archive includes COCO validation images and annotation JSON files, ZIP archives, and images used for visual demonstrations. Each is listed in `archive/manifest.json`. Paths remain under `local_assets/<original-path>`. The archive also preserves notebooks mentioning ImageNet-A.
+The Git LFS archive includes COCO validation images and annotation JSON files, ZIP archives, and images used for visual demonstrations. Each is listed in `archive/manifest.json`. Paths remain under `local_assets/<original-path>`; retrieve them with `git lfs pull` after cloning. The archive also preserves notebooks mentioning ImageNet-A.
 
 Raw COCO, ImageNet-A, CIFAR-100, ObjectNet, and ImageNet each have distinct label spaces and evaluation protocols. The new folder-based runner is not a detection evaluator or an automatic protocol adapter for those datasets. Dataset-specific exploratory code remains in the notebook archive. No external class mapping or evaluation protocol is fabricated.
 

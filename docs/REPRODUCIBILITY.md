@@ -7,12 +7,12 @@ Use Python 3.10 and the versions in `requirements.txt`. The actual local validat
 ```bash
 python -m pip install -e .
 python -m unittest discover -s tests -v
-python tools/verify_archive.py
+python tools/verify_archive.py --local --git-tracked
 ```
 
 Tests use CPU and small random-initialized models; they do not download weights. They cover exact entropy-mask parity with the archived notebook function, known entropy distributions, baseline counts, fixed-point saturation, ATS tie behavior, CLS retention, original spatial indices, unpruned timm prediction parity, input validation, class mapping, and evaluation provenance.
 
-GitHub Actions repeats CPU tests, verifies the portable archive, checks command entry points, and renders published-data figures. It does not run the large historical notebook collection or claim ImageNet reproduction.
+GitHub Actions retrieves LFS objects, repeats CPU tests, verifies the complete original-file archive, checks command entry points, and renders published-data figures. It does not run the large historical notebook collection or claim ImageNet reproduction.
 
 ## Match baselines first
 

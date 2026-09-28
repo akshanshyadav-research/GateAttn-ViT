@@ -2,7 +2,7 @@
 
 Paper: **GateAttn-ViT: Entropy-gated, attention-guided token pruning for resource-efficient Vision Transformer acceleration on FPGAs**, Akshansh Yadav and Palash Das, Journal of Systems Architecture 177 (2026), 103836. DOI: `10.1016/j.sysarc.2026.103836`.
 
-The supplied `JSA_main.pdf` is preserved locally under `local_assets/`; its exact checksum is in `archive/manifest.json`. The table transcription script is `tools/build_paper_tables.py`.
+The supplied `JSA_main.pdf` is tracked through Git LFS under `local_assets/`; its exact checksum is in `archive/manifest.json`. The table transcription script is `tools/build_paper_tables.py`.
 
 | Paper component | Available source evidence | Reusable entry point / data | Scope |
 | --- | --- | --- | --- |

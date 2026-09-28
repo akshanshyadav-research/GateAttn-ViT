@@ -1,0 +1,22 @@
+{
+  "model": "vit_base_patch16_224",
+  "method": "entropy",
+  "drop_rate": 0.15,
+  "entropy_mode": "gray",
+  "entropy_policy": "legacy",
+  "attention_blocks": [
+    3,
+    6,
+    9
+  ],
+  "attention_drop": 0.15,
+  "attention_policy": "quantile",
+  "preprocessing": "legacy",
+  "quantization": "notebook-fx16",
+  "word_bits": 16,
+  "fractional_bits": 8,
+  "layer_norm_eps": 1e-05,
+  "seed": 0,
+  "random_init": false,
+  "checkpoint": null
+}

@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "images": 1,
+  "top1_pct": 0.0,
+  "top5_pct": 0.0,
+  "mean_estimated_macs": 857487360.0,
+  "mean_forward_seconds": 0.06160175008699298,
+  "wall_seconds": 0.07182532991282642,
+  "timing_scope": "single-image model forward only; no warmup; not FPGA latency",
+  "metric_kind": "random_initialization_smoke_test"
+}

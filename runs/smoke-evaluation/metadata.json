@@ -1,0 +1,75 @@
+{
+  "status": "complete",
+  "config": {
+    "model": "vit_tiny_patch16_224",
+    "method": "entropy",
+    "drop_rate": 0.15,
+    "entropy_mode": "gray",
+    "entropy_policy": "legacy",
+    "attention_blocks": [
+      3,
+      6,
+      9
+    ],
+    "attention_drop": 0.15,
+    "attention_policy": "quantile",
+    "preprocessing": "legacy",
+    "quantization": "none",
+    "word_bits": 16,
+    "fractional_bits": 8,
+    "layer_norm_eps": 1e-05,
+    "seed": 0,
+    "random_init": true,
+    "checkpoint": null
+  },
+  "environment": {
+    "python": "3.10.12",
+    "platform": "Linux-5.15.0-102-generic-x86_64-with-glibc2.35",
+    "packages": {
+      "torch": "2.3.1",
+      "torchvision": "0.18.1",
+      "timm": "1.0.28",
+      "numpy": "1.23.5",
+      "opencv-python": "4.10.0.84",
+      "Pillow": "10.3.0",
+      "matplotlib": "3.9.0"
+    }
+  },
+  "dataset_root": "/home/viraj/entropy_experiments/entropy-vit-publication/runs/smoke-data",
+  "class_map_sha256": "1c8d37cb8161427dbb04eda28bc95fdef3b070c23df985a6812e7429454a8f00",
+  "device": "cpu",
+  "requested_images": 1,
+  "weights_sha256": "d3f76f642fa437cbbb9eeba63499923fd322b45fb9cbb81f822567afe74c2bd0",
+  "pretrained_config": {
+    "url": "https://storage.googleapis.com/vit_models/augreg/Ti_16-i21k-300ep-lr_0.001-aug_none-wd_0.03-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.03-res_224.npz",
+    "hf_hub_id": "timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k",
+    "architecture": "vit_tiny_patch16_224",
+    "tag": "augreg_in21k_ft_in1k",
+    "custom_load": true,
+    "input_size": [
+      3,
+      224,
+      224
+    ],
+    "fixed_input_size": true,
+    "interpolation": "bicubic",
+    "crop_pct": 0.9,
+    "crop_mode": "center",
+    "mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "std": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "num_classes": 1000,
+    "pool_size": null,
+    "first_conv": "patch_embed.proj",
+    "classifier": "head",
+    "license": "apache-2.0"
+  },
+  "metric_kind": "random_initialization_smoke_test"
+}
