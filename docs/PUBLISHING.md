@@ -1,12 +1,12 @@
 # Publishing the complete experiment repository
 
-The repository is prepared locally on the server. It has not been pushed to a hosting service. Every original experiment file is tracked: code, notebooks, original outputs, logs, image assets, COCO data and annotations, ZIP archives, and the supplied paper. Run records are retained; standalone generated run graphs are excluded. The curated graph collection contains the original Colab outputs corresponding to Figures 7–9.
+The public repository is https://github.com/IITjodhpurbuddy/GateAttn-ViT. Every original experiment file is tracked: code, notebooks, original outputs, logs, image assets, COCO data and annotations, ZIP archives, and the supplied paper. Run records are retained; standalone generated run graphs are excluded. The curated graph collection contains the original Colab outputs corresponding to Figures 7–9.
 
 ## Git LFS
 
 `archive/originals/` and `local_assets/` use Git LFS to retain exact source bytes, including files larger than ordinary Git hosting limits. Large generated run outputs also use LFS. Git commits store content-addressed pointers; the corresponding file objects are stored by Git LFS. Both must reach the remote to publish the complete repository.
 
-After creating a remote repository, publish from this directory:
+For a new local checkout without a remote, configure the destination and publish:
 
 ```bash
 git lfs install --local
@@ -15,7 +15,7 @@ git lfs push --all origin main
 git push -u origin main
 ```
 
-The normal Git LFS pre-push hook also uploads required objects. The explicit LFS push above makes the complete-object upload clear. No remote has been configured or uploaded during preparation.
+The normal Git LFS pre-push hook also uploads required objects. The explicit LFS push above makes the complete-object upload clear. Existing clones already have `origin` configured; skip `git remote add` there.
 
 To obtain the complete experiment elsewhere:
 
