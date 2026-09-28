@@ -8,3 +8,12 @@ __pycache__/
 .pytest_cache/
 # Notebook checkpoints in archive/ are intentional historical source records.
 /notebooks/.ipynb_checkpoints/
+
+# Only curated JSA paper graphs are published; generated run images stay local.
+/runs/**/*.png
+/runs/**/*.jpg
+/runs/**/*.jpeg
+/runs/**/*.svg
+/runs/**/*.pdf
+/figures/demo/
+!/runs/smoke-data/**/*.png

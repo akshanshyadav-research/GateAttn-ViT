@@ -1,0 +1,57 @@
+{
+  "source_url": "https://colab.research.google.com/drive/1Of57FctGySefxJt7GaN-1cbma_IRbtX1",
+  "source_notebook_sha256": "e9c57d46f4ddc410523328b8e32e9c426fc576cee0e6c0f7938482c7a68b970b",
+  "paper": "JSA_main.pdf",
+  "paper_sha256": "981f7392f0611b5d767442f631a146409af8db74d06b96946e642d9dcffc0529",
+  "index_convention": "zero-based cell and output indices in the supplied Colab notebook",
+  "figures": [
+    {
+      "paper_figure": 7,
+      "source_cell_index": 16,
+      "source_cell_id": "Y2FFC8fQDirP",
+      "source_output_index": 0,
+      "path": "figure7_small_tiny.png",
+      "sha256": "683491dda1956271eea19cd134aebb3b5aa0f14b7d0b78cf0e3d9d8553f3f781"
+    },
+    {
+      "paper_figure": 7,
+      "source_cell_index": 17,
+      "source_cell_id": "5ftedXdtOoVA",
+      "source_output_index": 0,
+      "path": "figure7_small_tiny_legend.png",
+      "sha256": "da11816160a47de5fca89ca115207eeef58ea0494ebc6cbb393b69d8c03ea260"
+    },
+    {
+      "paper_figure": 7,
+      "source_cell_index": 14,
+      "source_cell_id": "cw8dY8kA6PF5",
+      "source_output_index": 0,
+      "path": "figure7_base_large.png",
+      "sha256": "94d071e3ea19ef688a92caae627304120b1253ca255e7ec6edc88769e5ba6e65"
+    },
+    {
+      "paper_figure": 7,
+      "source_cell_index": 15,
+      "source_cell_id": "EypSrjDmP0mr",
+      "source_output_index": 0,
+      "path": "figure7_base_large_legend.png",
+      "sha256": "dc233891ebc8949aa9f2e6215433b25d9f98951c69342e42975b92f9285affcd"
+    },
+    {
+      "paper_figure": 8,
+      "source_cell_index": 31,
+      "source_cell_id": "CaaovBWA9-Gd",
+      "source_output_index": 0,
+      "path": "figure8_accuracy_gops.png",
+      "sha256": "f6d512d2a0fc4780e58411a14c63bec275f74c600ee7d235bc33feb95b432ceb"
+    },
+    {
+      "paper_figure": 9,
+      "source_cell_index": 25,
+      "source_cell_id": "VrIicTzTnsIP",
+      "source_output_index": 0,
+      "path": "figure9_latency.png",
+      "sha256": "eb8aac6b49c532cfdca7bf7f18c5b26648ac622ff8113211082c27147a678109"
+    }
+  ]
+}

@@ -66,7 +66,7 @@ Input processing and image hashing are excluded from the per-image forward timer
 ```bash
 python tools/extract_results.py
 python tools/build_paper_tables.py
-gateattn-plot --output runs/published-plots
+python tools/extract_paper_figures.py
 ```
 
 The extraction tool derives summaries from the already archived notebook observations and parses all text logs. Saved results may be partial, duplicated, or from a previous interactive state. The script preserves their source and saved-error indicators instead of inferring which one is the definitive published run.

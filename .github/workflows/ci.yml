@@ -19,4 +19,5 @@ jobs:
       - run: python tools/verify_archive.py --local --git-tracked
       - run: gateattn-evaluate --help
       - run: gateattn-visualize --help
-      - run: gateattn-plot --output runs/ci-paper-figures
+      - run: python tools/extract_paper_figures.py --output runs/ci-colab-figures
+      - run: gateattn-plot --output runs/ci-table-plots

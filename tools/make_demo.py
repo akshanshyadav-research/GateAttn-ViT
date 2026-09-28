@@ -9,7 +9,7 @@ from gateattn.visualize import plot_entropy_panels
 
 def main():
     root=Path(__file__).resolve().parents[1]
-    output=root/'figures/demo'
+    output=root/'runs/demo'
     output.mkdir(parents=True,exist_ok=True)
     image=np.full((224,224,3),235,dtype=np.uint8)
     rng=np.random.default_rng(2026)

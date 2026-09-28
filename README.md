@@ -6,9 +6,24 @@ Research companion for Akshansh Yadav and Palash Das, *Journal of Systems Archit
 
 This repository packages the supplied `entropy_experiments` notebook collection as a reusable Python implementation, a complete experiment archive, machine-readable results, and reproducible visualization tools.
 
-![Published accuracy–compute trade-off](figures/paper/table2_accuracy_compute.png)
+## Research paper graphs
 
-*Values above are transcribed from Table 2 of the supplied paper. They are published results, not measurements from the refactored implementation.*
+Original saved graph outputs from the [author-provided Colab notebook](https://colab.research.google.com/drive/1Of57FctGySefxJt7GaN-1cbma_IRbtX1), selected against Figures 7–9 in `JSA_main.pdf`. [Source mapping and presentation differences](figures/paper/README.md).
+
+**Figure 7 — Accuracy–pruning trade-off**
+
+| ViT/DeiT Small and Tiny | ViT Base and Large |
+| --- | --- |
+| ![Small and Tiny baseline legend](figures/paper/figure7_small_tiny_legend.png) | ![Base and Large baseline legend](figures/paper/figure7_base_large_legend.png) |
+| ![Small and Tiny accuracy](figures/paper/figure7_small_tiny.png) | ![Base and Large accuracy](figures/paper/figure7_base_large.png) |
+
+**Figure 8 — Accuracy–GOPs trade-off across pruning blocks**
+
+![Figure 8 original Colab output](figures/paper/figure8_accuracy_gops.png)
+
+**Figure 9 — GateAttn-ViT latency breakdown**
+
+![Figure 9 original Colab output](figures/paper/figure9_latency.png)
 
 ## What is included
 
@@ -21,11 +36,20 @@ This repository packages the supplied `entropy_experiments` notebook collection 
 - **Complete preservation:** **1,060 notebooks** (960 regular notebooks and 100 checkpoints), **1,060 guarded Python exports**, every saved notebook output, and all 47 original text logs. All **6,162 source files** are listed with SHA-256 checksums.
 - **Results:** all eight paper tables (Table 4 has two CSVs), Figure 9 latency data, **50,738 notebook accuracy observations**, and **55,595 text-log observations**, with provenance kept separate.
 
-**The complete experiment is tracked in Git.** All 6,162 original files—including the paper, dataset archives, annotations, images, and exact notebook bytes—are included through Git LFS. Reusable code, documentation, extracted results, and generated run outputs are included too. See [archive layout and restoration](docs/ARCHIVE.md).
+**The complete experiment is tracked in Git.** All 6,162 original files—including the paper, dataset archives, annotations, images, and exact notebook bytes—are included through Git LFS. Reusable code, documentation, extracted results, and run records are included too; standalone generated run images are excluded. See [archive layout and restoration](docs/ARCHIVE.md).
 
 Install Git LFS before cloning, then run `git lfs pull` inside the clone to retrieve every original file. LFS pointer files alone are not the dataset; the associated objects must be pushed to the remote alongside Git commits. See [publishing instructions](docs/PUBLISHING.md).
 
 ## Quick start
+
+Follow the [step-by-step usage guide](docs/GETTING_STARTED.md) for installation, paper graphs, evaluation, and original notebooks.
+
+```bash
+git lfs install
+git clone https://github.com/IITjodhpurbuddy/GateAttn-ViT.git
+cd GateAttn-ViT
+git lfs pull
+```
 
 Python **3.10** is the validated environment. Run from the repository root:
 
@@ -42,20 +66,13 @@ python -m pip install -e . --no-deps
 On Windows, activate with `.venv\Scripts\Activate.ps1` in PowerShell. Installation may download dependencies; the figure commands below do not need pretrained weights or datasets.
 
 ```bash
-# Recreate plots from the published tables.
-gateattn-plot --data results/paper --output runs/paper-figures
-
-# Generate a deterministic, synthetic entropy visualization.
-python tools/make_demo.py
+# Extract the selected original Colab outputs without rerunning plotting code.
+python tools/extract_paper_figures.py
 
 # Verify the portable notebook archive and run CPU tests.
 python tools/verify_archive.py --local --git-tracked
 python -m unittest discover -s tests -v
 ```
-
-![Entropy gating example](figures/demo/entropy_and_patch_selection.png)
-
-*The example is synthetic; it illustrates patch entropy and retention without making a classification claim.*
 
 ## Evaluate on your images
 
@@ -120,7 +137,7 @@ See [reproduction details and execution examples](docs/REPRODUCIBILITY.md) and t
 | `notebooks/` | Small walkthrough using the reusable API |
 | `results/paper/` | Published values with explicit paper/table provenance |
 | `results/extracted/` | Saved notebook/log observations, without completion assumptions |
-| `figures/` | Generated paper-based plots and a labeled synthetic demonstration |
+| `figures/paper/` | Original Colab outputs corresponding to Figures 7–9, with source hashes |
 | `archive/notebooks/` | Every original notebook with outputs stored separately |
 | `archive/python/` | One Python export per notebook, preserving code and cell order |
 | `archive/output_index/`, `archive/output_objects/` | Lossless saved output storage and reconstruction maps |

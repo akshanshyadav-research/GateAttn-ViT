@@ -1,6 +1,6 @@
 # Publishing the complete experiment repository
 
-The repository is prepared locally on the server. It has not been pushed to a hosting service. Every original experiment file is tracked: code, notebooks, original outputs, logs, image assets, COCO data and annotations, ZIP archives, and the supplied paper. Generated run outputs are tracked as well.
+The repository is prepared locally on the server. It has not been pushed to a hosting service. Every original experiment file is tracked: code, notebooks, original outputs, logs, image assets, COCO data and annotations, ZIP archives, and the supplied paper. Run records are retained; standalone generated run graphs are excluded. The curated graph collection contains the original Colab outputs corresponding to Figures 7–9.
 
 ## Git LFS
 
@@ -10,7 +10,7 @@ After creating a remote repository, publish from this directory:
 
 ```bash
 git lfs install --local
-git remote add origin <your-repository-url>
+git remote add origin https://github.com/IITjodhpurbuddy/GateAttn-ViT.git
 git lfs push --all origin main
 git push -u origin main
 ```
@@ -21,8 +21,8 @@ To obtain the complete experiment elsewhere:
 
 ```bash
 git lfs install
-git clone <your-repository-url>
-cd entropy-vit-publication
+git clone https://github.com/IITjodhpurbuddy/GateAttn-ViT.git
+cd GateAttn-ViT
 git lfs pull
 python tools/verify_archive.py --local --git-tracked
 git lfs fsck

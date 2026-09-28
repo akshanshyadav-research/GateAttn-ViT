@@ -45,6 +45,14 @@ python tools/restore_notebook.py \
 
 The full [notebook index](NOTEBOOK_INDEX.md) includes every variant. Original image files are tracked in `local_assets/` through Git LFS and inventoried by SHA-256. Run `git lfs pull` after cloning to retrieve those inputs for rerunning original visualizations. Saved notebook outputs can also be restored from the compressed output store without rerunning inference.
 
-## Published-result plots
+## Paper graphs from Colab
 
-`gateattn-plot` reads only `results/paper/*.csv` and recreates comparative plots for Table 2, Table 4b, Table 5, Table 7, Table 8, and Figure 9. These are newly formatted plots of published values, not recovered original plotting scripts or newly measured experiments. Their captions retain that distinction.
+The published graph collection contains only the original saved Colab outputs corresponding to Figures 7–9 in `JSA_main.pdf`. See [the figure mapping](../figures/paper/README.md) for exact source cell IDs, hashes, and differences between the notebook outputs and the final paper layout.
+
+```bash
+python tools/extract_paper_figures.py
+```
+
+This decodes the selected saved PNG outputs without executing the notebook or redrawing any data. The selected source cells and outputs are preserved in `notebooks/jsa_paper_graphs.ipynb`.
+
+`gateattn-plot` remains an optional local analysis tool: it creates new plots from table CSVs, not the paper's original figures. Its outputs, synthetic demos, and generated run images are not part of the published figure collection. The original experiment archive remains intact.

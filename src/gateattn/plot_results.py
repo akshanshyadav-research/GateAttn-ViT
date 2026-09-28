@@ -75,7 +75,7 @@ def render_paper(data, output):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--data', type=Path, default=Path('results/paper'))
-    p.add_argument('--output', type=Path, default=Path('figures/paper'))
+    p.add_argument('--output', type=Path, default=Path('runs/table-plots'))
     args = p.parse_args()
     render_paper(args.data, args.output)
     print(f'Paper-based figures written to {args.output}')
