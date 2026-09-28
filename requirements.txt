@@ -1,0 +1,9 @@
+# Python 3.10; versions used for the local CPU validation.
+# Install torch/torchvision for your platform first (see docs/REPRODUCIBILITY.md).
+numpy==1.23.5
+torch==2.3.1
+torchvision==0.18.1
+timm==1.0.28
+opencv-python==4.10.0.84
+matplotlib==3.9.0
+Pillow==10.3.0

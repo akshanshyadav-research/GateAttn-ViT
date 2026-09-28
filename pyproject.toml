@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gateattn-vit"
+version = "0.1.0"
+description = "Entropy-gated, attention-guided ViT inference and an archival research experiment collection"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  {name = "Akshansh Yadav"},
+  {name = "Palash Das"},
+]
+dependencies = [
+  "numpy>=1.23.5,<2",
+  "torch>=2.3.1,<2.4",
+  "torchvision>=0.18.1,<0.19",
+  "timm==1.0.28",
+  "Pillow>=9.5,<12",
+  "opencv-python>=4.10,<4.11",
+  "matplotlib>=3.9,<3.10",
+]
+
+[project.optional-dependencies]
+notebooks = ["jupyterlab>=4,<5", "nbformat>=5,<6"]
+legacy = ["qtorch", "scikit-image", "seaborn", "papermill", "transformers"]
+
+[project.scripts]
+gateattn-evaluate = "gateattn.evaluate:main"
+gateattn-visualize = "gateattn.visualize:main"
+gateattn-plot = "gateattn.plot_results:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

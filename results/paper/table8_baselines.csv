@@ -1,0 +1,13 @@
+model,drop_pct,center_crop_top1_pct,random_drop_top1_pct,edpg_top1_pct,provenance,paper_location
+ViT-Tiny,0,66.15,66.15,66.15,transcribed_from_supplied_paper_not_rerun,Table 8; page 11
+ViT-Tiny,10,65.02,64.5,65.27,transcribed_from_supplied_paper_not_rerun,Table 8; page 11
+ViT-Tiny,20,59.3,61.97,63.12,transcribed_from_supplied_paper_not_rerun,Table 8; page 11
+ViT-Tiny,30,56.16,59.61,60.17,transcribed_from_supplied_paper_not_rerun,Table 8; page 11
+ViT-Tiny,40,51.9,54.64,56.04,transcribed_from_supplied_paper_not_rerun,Table 8; page 11
+ViT-Tiny,50,46.29,47.11,49.17,transcribed_from_supplied_paper_not_rerun,Table 8; page 11
+ViT-Small,0,78.11,78.11,78.11,transcribed_from_supplied_paper_not_rerun,Table 8; page 11
+ViT-Small,10,77.44,76.99,77.66,transcribed_from_supplied_paper_not_rerun,Table 8; page 11
+ViT-Small,20,75.89,75.79,76.61,transcribed_from_supplied_paper_not_rerun,Table 8; page 11
+ViT-Small,30,75.05,73.68,74.95,transcribed_from_supplied_paper_not_rerun,Table 8; page 11
+ViT-Small,40,72.1,70.68,72.42,transcribed_from_supplied_paper_not_rerun,Table 8; page 11
+ViT-Small,50,66.87,65.91,68.14,transcribed_from_supplied_paper_not_rerun,Table 8; page 11

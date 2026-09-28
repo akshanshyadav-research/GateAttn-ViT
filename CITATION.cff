@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use these experiments or methods, please cite the GateAttn-ViT paper."
+title: "GateAttn-ViT research companion and entropy experiment archive"
+version: 0.1.0
+type: software
+authors:
+  - family-names: Yadav
+    given-names: Akshansh
+  - family-names: Das
+    given-names: Palash
+preferred-citation:
+  type: article
+  title: "GateAttn-ViT: Entropy-gated, attention-guided token pruning for resource-efficient Vision Transformer acceleration on FPGAs"
+  authors:
+    - family-names: Yadav
+      given-names: Akshansh
+    - family-names: Das
+      given-names: Palash
+  journal: Journal of Systems Architecture
+  volume: "177"
+  start: "103836"
+  year: 2026
+  doi: 10.1016/j.sysarc.2026.103836

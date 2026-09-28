@@ -1,0 +1,13 @@
+model,drop_pct,cifar100_top1_pct,objectnet_top1_pct,savings_pct_reported,provenance,paper_location
+ViT-Tiny,0,76.48,60.61,0,transcribed_from_supplied_paper_not_rerun,Table 7; page 11
+ViT-Tiny,10,75.52,60.53,12.4,transcribed_from_supplied_paper_not_rerun,Table 7; page 11
+ViT-Tiny,20,74.53,60.38,22.13,transcribed_from_supplied_paper_not_rerun,Table 7; page 11
+ViT-Tiny,30,72.07,59.35,32.26,transcribed_from_supplied_paper_not_rerun,Table 7; page 11
+ViT-Tiny,40,68.42,58.55,41.81,transcribed_from_supplied_paper_not_rerun,Table 7; page 11
+ViT-Tiny,50,63.61,57.04,50.74,transcribed_from_supplied_paper_not_rerun,Table 7; page 11
+ViT-Small,0,84.93,63.47,0,transcribed_from_supplied_paper_not_rerun,Table 7; page 11
+ViT-Small,10,84.33,63.24,10.63,transcribed_from_supplied_paper_not_rerun,Table 7; page 11
+ViT-Small,20,82.75,62.86,21.31,transcribed_from_supplied_paper_not_rerun,Table 7; page 11
+ViT-Small,30,80.66,62.33,31.83,transcribed_from_supplied_paper_not_rerun,Table 7; page 11
+ViT-Small,40,77.65,61.74,41.47,transcribed_from_supplied_paper_not_rerun,Table 7; page 11
+ViT-Small,50,71.75,60.69,50.5,transcribed_from_supplied_paper_not_rerun,Table 7; page 11

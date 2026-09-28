@@ -1,0 +1,11 @@
+{
+  "torch": "2.3.1",
+  "torchvision": "0.18.1",
+  "timm": "1.0.28",
+  "numpy": "1.23.5",
+  "opencv-python": "4.10.0.84",
+  "matplotlib": "3.9.0",
+  "Pillow": "10.3.0",
+  "setuptools": "59.6.0",
+  "wheel": "0.37.1"
+}

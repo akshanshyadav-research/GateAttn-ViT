@@ -1,0 +1,9 @@
+{
+  "source_files": 6162,
+  "notebooks": 1060,
+  "checkpoint_notebooks": 100,
+  "assets": 5102,
+  "source_bytes": 3294239638,
+  "accuracy_observations": 50738,
+  "notebooks_with_saved_errors": 551
+}

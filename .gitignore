@@ -1,0 +1,13 @@
+# Exact original bytes and third-party dataset assets are kept locally.
+/archive/originals/
+/local_assets/
+/runs/
+/.venv/
+/build/
+/dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Notebook checkpoints in archive/ are intentional historical source records.
+/notebooks/.ipynb_checkpoints/

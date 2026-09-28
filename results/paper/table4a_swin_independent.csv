@@ -1,0 +1,16 @@
+model,pruning_stage,drop_pct,top1_pct,accuracy_change_pp,provenance,paper_location
+Swin-Tiny,EDPG -1,50,74.53,-5.78,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Small,EDPG -1,50,74.78,-5.62,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Base,EDPG -1,50,74.82,-5.66,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Tiny,ATS 0,50,72.72,-7.59,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Small,ATS 0,50,72.39,-8.01,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Base,ATS 0,50,72.23,-8.25,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Tiny,ATS 1,50,78.71,-1.6,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Small,ATS 1,50,78.83,-1.57,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Base,ATS 1,50,78.79,-1.69,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Tiny,ATS 2,50,75.87,-4.44,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Small,ATS 2,50,76.11,-4.29,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Base,ATS 2,50,76.01,-4.47,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Tiny,ATS 3,50,79.32,-0.99,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Small,ATS 3,50,79.55,-0.85,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9
+Swin-Base,ATS 3,50,79.89,-0.59,transcribed_from_supplied_paper_not_rerun,Table 4a; page 9

@@ -1,0 +1,10 @@
+method,model,platform,precision,frequency_mhz,pruning_pct,bram,dsp,ff,lut,power_w,fps,fps_per_w,accuracy_change_pp,provenance,paper_location
+HeatViT,DeiT-Small,ZCU102,FX8,150,10/16/39,338.5,1955,100400,145000,10.697,57,5.32,,transcribed_from_supplied_paper_not_rerun,Table 5; page 10
+AutoViT no quantization,ViT-Small,ZCU102,W32A32,150,,,1745,,130000,8.38,38.9,4.64,0,transcribed_from_supplied_paper_not_rerun,Table 5; page 10
+AutoViT quantization,ViT-Small,ZCU102,W4A4+W3A4,150,,,1549,,193000,10.34,155.8,15.06,-1.91,transcribed_from_supplied_paper_not_rerun,Table 5; page 10
+MoE-Sched,ViT-Small,U280,INT8,,,652,3379,,,39.24,119.3,3.04,-0.28,transcribed_from_supplied_paper_not_rerun,Table 5; page 10
+GateAttn-ViT,ViT-Small,ZCU104,FX16,250,0/0/0/0,505,1248,86122,58640,3.88,14.2,3.65,0,transcribed_from_supplied_paper_not_rerun,Table 5; page 10
+GateAttn-ViT,ViT-Small,ZCU104,FX16,250,10/10/10/10,505,1248,86122,58640,3.88,15.73,4.05,-0.57,transcribed_from_supplied_paper_not_rerun,Table 5; page 10
+GateAttn-ViT,ViT-Small,ZCU104,FX16,250,20/20/20/20,505,1248,86122,58640,3.88,19.63,5.06,-2.63,transcribed_from_supplied_paper_not_rerun,Table 5; page 10
+GateAttn-ViT,ViT-Small,ZCU104,FX16,250,20/25/25/25,505,1248,86122,58640,3.88,20.91,5.39,-3.74,transcribed_from_supplied_paper_not_rerun,Table 5; page 10
+GateAttn-ViT,ViT-Small,ZCU104,FX16,150,17/17/17/17,457,848,20297,52489,3.76,12.08,3.21,-0.37,transcribed_from_supplied_paper_not_rerun,Table 5; page 10

@@ -1,0 +1,3 @@
+module,precision,frequency_mhz,bram,dsp,ff,lut,latency_ms,provenance,paper_location
+EDPG,FX16,250,5,256,37194,105142,0.637,transcribed_from_supplied_paper_not_rerun,Table 3; page 8
+ATS (ViT-Small),FX16,250,136,0,97665,38793,0.254,transcribed_from_supplied_paper_not_rerun,Table 3; page 8

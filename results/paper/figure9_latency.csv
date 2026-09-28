@@ -1,0 +1,4 @@
+uniform_pruning_pct,tokenization_ms,msa_ms,mlp_ms,layernorm_ms,residual_ms,vit_io_ms,total_ms_reported,provenance,paper_location
+0,0.683,22.008,45.108,1.368,0.696,0.572,70.435,transcribed_from_supplied_paper_not_rerun,Figure 9 and Section 4.7; pages 9–10
+10,0.683,20.412,40.02,1.176,0.696,0.572,63.559,transcribed_from_supplied_paper_not_rerun,Figure 9 and Section 4.7; pages 9–10
+20,0.683,15.816,32.196,0.984,0.696,0.572,50.947,transcribed_from_supplied_paper_not_rerun,Figure 9 and Section 4.7; pages 9–10
