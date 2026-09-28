@@ -10,20 +10,6 @@ This repository packages the supplied `entropy_experiments` notebook collection 
 
 Original saved graph outputs from the [author-provided Colab notebook](https://colab.research.google.com/drive/1Of57FctGySefxJt7GaN-1cbma_IRbtX1), selected against Figures 7–9 in `JSA_main.pdf`. [Source mapping and presentation differences](figures/paper/README.md).
 
-**Figure 7 — Accuracy–pruning trade-off**
-
-| ViT/DeiT Small and Tiny | ViT Base and Large |
-| --- | --- |
-| ![Small and Tiny accuracy](figures/paper/figure7_small_tiny.png) | ![Base and Large accuracy](figures/paper/figure7_base_large.png) |
-
-**Figure 8 — Accuracy–GOPs trade-off across pruning blocks**
-
-![Figure 8 original Colab output](figures/paper/figure8_accuracy_gops.png)
-
-**Figure 9 — GateAttn-ViT latency breakdown**
-
-![Figure 9 original Colab output](figures/paper/figure9_latency.png)
-
 ## What is included
 
 - **EDPG:** grayscale or pooled-RGB Shannon entropy, input patch selection, configurable cutoff and tie handling.
